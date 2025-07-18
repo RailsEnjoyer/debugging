@@ -5,7 +5,7 @@ def register_user(params)
 
   user = User.new(params[:name], params[:email])
   puts "Created user: #{user.inspect}"
-
+  
   unless user.valid?
     puts "User is invalid!"
     return
@@ -14,4 +14,4 @@ def register_user(params)
   puts "User registered successfully!"
 end
 
-register_user({ name: "Bogdan", email: "bogdanexample.com" })
+register_user({ name: "Bogdan", email: "bogdan@example.com" })

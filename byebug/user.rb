@@ -1,9 +1,11 @@
+require "byebug"
+
 class User
   attr_accessor :name, :email
 
   def initialize(name, email)
     @name = name
-    email = email  # 👈 тут баг
+    @email = email
   end
 
   def valid?
